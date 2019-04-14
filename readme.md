@@ -1,5 +1,58 @@
 # RxJS Usage Patterns
 
+The repository contains a set of RxJS usage patterns which can make a programmer to spend a couple of hours debugging. 
+
+## How to run the examples
+
+Compile the typescript files using
+
+> npm run tsc
+
+The resulting Javascript files will be stored into ./dist folder.
+
+Run a specific Javascript file using
+
+> node ./dist/javascript-file-name
+
+The examples were tested with Node.js 11.14.0
+
+## Is it first or last?
+
+Converting an observable to a promise using `toPromise` operator is quite common but there is a catch. The value provided by the promise is the last value emitted by the observable before completing. 
+
+```typescript
+const numbers$ = of(1,2,3,4,5)
+
+const lastNumberPromise = numbers$.toPromise()
+
+lastNumberPromise.then(console.log);
+```
+
+The value displayed when running the above code snippet is 5. This may be unexpected because sometimes we want to have the promise resolved with the first emitted value. If this is the case, then `take` operator should be used to complete the resulted observable sooner.
+
+```typescript
+const firstNumberPromise = numbers$.pipe(
+    take(1)
+).toPromise();
+
+firstNumberPromise.then(console.log)
+```
+
+The value 1 will be displayed when running this code snippet.
+
+If the observable never completes then the promise will never provide a value which may be quite surprising.
+
+```typescript
+const neverCompletingPromise = NEVER.pipe(
+    startWith(6)
+).toPromise();
+
+neverCompletingPromise.then(console.log);
+```
+
+No value will be displayed when running the above lines of code.
+
+
 ## Avoid to unsubscribe with takeUntil
 
 Subscribing to RxJS flows is common in Javascript/Typescript applications but forgetting to unsubscribe will cause leaks and loss of performance. Checking that each subscription was properly unsubscribed is a tedious task but unsubscribing can be avoided if the flows are closed using takeUntil operator.
