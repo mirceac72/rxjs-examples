@@ -1,16 +1,8 @@
 import { interval, of, timer, EMPTY } from 'rxjs';
 import { delay, scan, switchMap, take, takeUntil } from 'rxjs/operators';
+import { createSubscriber } from './subscriber';
 
 const endless$ = interval(1000);
-
-class Subscriber {
-    constructor(private name: string) {}
-    next = (x: any) => { console.log(`${this.name}. Next value: ${x}.`); };
-    error = (x: any) => { console.log(`${this.name}. Error: ${x}.`); };
-    complete = () => { console.log(`${this.name} completed.`); }
-}
-
-const createSubscriber = (name: string) => new Subscriber(name);
 
 const endIn3Seconds$ = of(true).pipe(
     delay(3000)
