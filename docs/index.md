@@ -1,6 +1,6 @@
 # RxJS Usage Patterns
 
-The repository contains a set of RxJS usage patterns which, if not well understood, can make a programmer to spend a couple of hours debugging.
+The repository contains a set of RxJS usage patterns which, if not well understood, can make a programmer to spend a couple of hours debugging. [How to run]({{ site.baseurl }}{% link how-to-run.md %})
 
 ## Is it first or last?
 
