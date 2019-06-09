@@ -2,4 +2,4 @@ theme: jekyll-theme-cayman
 collections:
     patterns:
         output: true
-        
+        permalink: /:collection/:name
