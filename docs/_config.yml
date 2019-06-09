@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
 collections:
     patterns:
-        output: true
+        output: false
