@@ -2,7 +2,7 @@
 title: Is it first or last?
 ---
 
-# Is it first or last?
+## Is it first or last?
 
 Converting an observable to a promise using `toPromise` operator is quite common but there is a catch. The value provided by the promise is the last value emitted by the observable before completing. 
 

@@ -2,7 +2,7 @@
 title: Destroy old instances issued by a flow
 ---
 
-# Destroy old instances issued by a flow
+## Destroy old instances issued by a flow
 
 A common scenario while pushing new class instances through RxJS streams is to call some clean-up code for the previous emitted instances. This is the case with the instances of the `ElementWithResources` class which contain a stream member `flow$` that needs to be completed by a `destroy()` call.
 

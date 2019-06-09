@@ -2,7 +2,7 @@
 title: Prepare for the worst
 ---
 
-# Prepare for the worst
+## Prepare for the worst
 
 Observables may throw errors as well and this can happen quite frequently if the observable delivers the result of a network call. Dealing with these errors should be a first class citizen in our design and not just an afterthought because an error can bring down an entire workflow.
 

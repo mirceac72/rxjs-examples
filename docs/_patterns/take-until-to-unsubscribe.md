@@ -2,7 +2,7 @@
 title: Avoid to unsubscribe with takeUntil
 ---
 
-# Avoid to unsubscribe with takeUntil
+## Avoid to unsubscribe with takeUntil
 
 Subscribing to RxJS flows is common in Javascript/Typescript applications but forgetting to unsubscribe will cause leaks and loss of performance. Checking that each subscription was properly unsubscribed is a tedious task but unsubscribing can be avoided if the flows are closed using the `takeUntil` operator.
 
