@@ -5,12 +5,11 @@ This repository contains a set of RxJS usage patterns which, if not well underst
 ## Contents
 <div id="toc">
 {% for example in site.patterns %}
-  <h3>
+  <h4>
     <a href="#{{ example.id }}">
       {{ example.title }}
     </a>
-  </h3>
-  <p>{{ staff_member.content | markdownify }}</p>
+  </h4>
 {% endfor %}
 </div>
 
