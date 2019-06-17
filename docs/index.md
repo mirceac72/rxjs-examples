@@ -3,7 +3,7 @@
 This repository contains a set of RxJS usage patterns which, if not well understood, can make a programmer to spend a couple of hours debugging. [How to run]({{ site.baseurl }}{% link how-to-run.md %})
 
 ## Contents
-<div id="#toc">
+<div id="toc">
 {% for example in site.patterns %}
   <h3>
     <a href="#{{ example.id }}">
