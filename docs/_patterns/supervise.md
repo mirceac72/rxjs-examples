@@ -1,4 +1,5 @@
 ---
+id: supervise
 title: Prepare for the worst
 ---
 

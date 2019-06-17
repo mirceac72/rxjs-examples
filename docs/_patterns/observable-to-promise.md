@@ -1,4 +1,5 @@
 ---
+id: observable-to-promise
 title: Is it first or last?
 ---
 

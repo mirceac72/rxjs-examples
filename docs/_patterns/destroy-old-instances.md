@@ -1,4 +1,5 @@
 ---
+id: destroy-old-instances
 title: Destroy old instances issued by a flow
 ---
 
